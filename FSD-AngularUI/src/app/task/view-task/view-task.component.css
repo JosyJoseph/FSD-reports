@@ -1,0 +1,19 @@
+.row-centered {
+    text-align: center;
+}
+
+.row-right {
+    text-align: right;
+    padding-right: 2%;
+}
+
+.checkbox-padding {
+    padding-left: 5px;
+}
+
+.newButton{
+
+    background-color: rgb(200, 211, 224);
+    color: black;
+
+}

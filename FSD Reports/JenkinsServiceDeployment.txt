@@ -1,0 +1,490 @@
+Started by user admin
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url http://172.18.2.18/JosyJoseph/ProjectManagement-API.git # timeout=10
+Fetching upstream changes from http://172.18.2.18/JosyJoseph/ProjectManagement-API.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress http://172.18.2.18/JosyJoseph/ProjectManagement-API.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 5d23a94eac20aa516564f31405d6945972e3fbde (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 5d23a94eac20aa516564f31405d6945972e3fbde
+Commit message: "Initial commit"
+ > git.exe rev-list --no-walk 5d23a94eac20aa516564f31405d6945972e3fbde # timeout=10
+[Project Management - WebAPI] $ cmd /c call C:\WINDOWS\TEMP\jenkins6784137625341741133.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI>C:\Josy\nuget.exe restore ProjectManagerApi.sln 
+MSBuild auto-detection: using msbuild version '15.1.548.43366' from 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\bin'.
+All packages listed in packages.config are already installed.
+
+C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI>exit 0 
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\amd64\MSBuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\amd64\MSBuild.exe" /P:VisualStudioVersion=15.0 /P:AllowUntrustedCertificate=true /P:DeployOnBuild=True /P:PublishProfile=C:\Josy\CustomProfile.pubxml /P:DeployIISAppPath=ProjectManagerApi /P:Configuration=Release ProjectManagerApi.sln " && exit %%ERRORLEVEL%% from C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI
+[Project Management - WebAPI] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\amd64\MSBuild.exe" /P:VisualStudioVersion=15.0 /P:AllowUntrustedCertificate=true /P:DeployOnBuild=True /P:PublishProfile=C:\Josy\CustomProfile.pubxml /P:DeployIISAppPath=ProjectManagerApi /P:Configuration=Release ProjectManagerApi.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 15.1.548.43366
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+Build started 09-05-2018 13:53:54.
+Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Release|Any CPU".
+Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ProjectManagerApi.csproj" (2) on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "bin\".
+  Creating directory "obj\Release\".
+Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ProjectManagerApi.csproj" (2) is building "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\BusinessEntities.csproj" (3:2) on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "bin\Release\".
+  Creating directory "obj\Release\".
+CoreCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\BusinessEntities.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output ProjectModel.cs Properties\AssemblyInfo.cs Status.cs ParentTaskModel.cs TaskModel.cs UserModel.cs ProjectUpdateResult.cs TaskUpdateResult.cs UserUpdateResult.cs "C:\WINDOWS\TEMP\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+  Using shared compilation with compiler from directory: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\BusinessEntities.dll" to "bin\Release\BusinessEntities.dll".
+  BusinessEntities -> C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll
+  Copying file from "obj\Release\BusinessEntities.pdb" to "bin\Release\BusinessEntities.pdb".
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\BusinessEntities.csproj" (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ProjectManagerApi.csproj" (2) is building "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\BusinessLayer.csproj" (4:2) on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "bin\Release\".
+  Creating directory "obj\Release\".
+Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\BusinessLayer.csproj" (4:2) is building "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\DataAccessLayer.csproj" (5:2) on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "bin\Release\".
+  Creating directory "obj\Release\".
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Runtime.Serialization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Security.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\DataAccessLayer.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output Migrations\Configuration.cs ParentTask.cs ParentTaskRepository.cs Project.cs ProjectManagerContext.cs Properties\AssemblyInfo.cs Task.cs User.cs ProjectRepository.cs TaskRepository.cs UserRepository.cs "C:\WINDOWS\TEMP\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+  Using shared compilation with compiler from directory: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" to "bin\Release\BusinessEntities.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" to "bin\Release\EntityFramework.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" to "bin\Release\EntityFramework.SqlServer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.pdb" to "bin\Release\BusinessEntities.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.xml" to "bin\Release\EntityFramework.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.xml" to "bin\Release\EntityFramework.SqlServer.xml".
+_CopyAppConfigFile:
+  Copying file from "App.config" to "bin\Release\DataAccessLayer.dll.config".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\DataAccessLayer.dll" to "bin\Release\DataAccessLayer.dll".
+  DataAccessLayer -> C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\DataAccessLayer.dll
+  Copying file from "obj\Release\DataAccessLayer.pdb" to "bin\Release\DataAccessLayer.pdb".
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\DataAccessLayer.csproj" (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\DataAccessLayer.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\BusinessLayer.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output ProjectBusiness.cs Properties\AssemblyInfo.cs TaskBusiness.cs UserBusiness.cs "C:\WINDOWS\TEMP\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+  Using shared compilation with compiler from directory: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" to "bin\Release\BusinessEntities.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\DataAccessLayer.dll" to "bin\Release\DataAccessLayer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\EntityFramework.dll" to "bin\Release\EntityFramework.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.pdb" to "bin\Release\BusinessEntities.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\DataAccessLayer.pdb" to "bin\Release\DataAccessLayer.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\DataAccessLayer.dll.config" to "bin\Release\DataAccessLayer.dll.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\DataAccessLayer\bin\Release\EntityFramework.xml" to "bin\Release\EntityFramework.xml".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\BusinessLayer.dll" to "bin\Release\BusinessLayer.dll".
+  BusinessLayer -> C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\BusinessLayer.dll
+  Copying file from "obj\Release\BusinessLayer.pdb" to "bin\Release\BusinessLayer.pdb".
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\BusinessLayer.csproj" (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\build\..\tools\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\BusinessLayer.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.WebRequest.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Runtime.Serialization.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Security.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.Abstractions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.ApplicationServices.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Cors.5.2.4\lib\net45\System.Web.Cors.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.Entity.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Cors.5.2.4\lib\net45\System.Web.Http.Cors.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.Routing.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\WebGrease.1.5.2\lib\WebGrease.dll" /debug+ /debug:pdbonly /optimize+ /out:obj\Release\ProjectManagerApi.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output App_Start\WebApiConfig.cs Controllers\ProjectController.cs Controllers\TaskController.cs Controllers\UserController.cs Global.asax.cs Properties\AssemblyInfo.cs "C:\WINDOWS\TEMP\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll" to "bin\Antlr3.Runtime.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" to "bin\BusinessEntities.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\BusinessLayer.dll" to "bin\BusinessLayer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" to "bin\EntityFramework.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" to "bin\EntityFramework.SqlServer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll" to "bin\Microsoft.AI.Agent.Intercept.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll" to "bin\Microsoft.AI.DependencyCollector.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll" to "bin\Microsoft.AI.PerfCounterCollector.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll" to "bin\Microsoft.AI.ServerTelemetryChannel.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll" to "bin\Microsoft.AI.Web.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll" to "bin\Microsoft.AI.WindowsServer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll" to "bin\Microsoft.ApplicationInsights.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" to "bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" to "bin\Microsoft.Web.Infrastructure.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" to "bin\Newtonsoft.Json.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll" to "bin\System.Net.Http.Formatting.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Cors.5.2.4\lib\net45\System.Web.Cors.dll" to "bin\System.Web.Cors.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" to "bin\System.Web.Helpers.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Cors.5.2.4\lib\net45\System.Web.Http.Cors.dll" to "bin\System.Web.Http.Cors.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll" to "bin\System.Web.Http.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll" to "bin\System.Web.Http.WebHost.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" to "bin\System.Web.Mvc.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" to "bin\System.Web.Optimization.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" to "bin\System.Web.Razor.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" to "bin\System.Web.WebPages.Deployment.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" to "bin\System.Web.WebPages.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" to "bin\System.Web.WebPages.Razor.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\WebGrease.1.5.2\lib\WebGrease.dll" to "bin\WebGrease.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\DataAccessLayer.dll" to "bin\DataAccessLayer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.pdb" to "bin\BusinessEntities.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\BusinessLayer.pdb" to "bin\BusinessLayer.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml" to "bin\EntityFramework.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml" to "bin\EntityFramework.SqlServer.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" to "bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.xml" to "bin\System.Net.Http.Formatting.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.xml" to "bin\System.Web.Http.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Cors.5.2.4\lib\net45\System.Web.Http.Cors.xml" to "bin\System.Web.Http.Cors.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.xml" to "bin\Newtonsoft.Json.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" to "bin\System.Web.Helpers.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.xml" to "bin\System.Web.Http.WebHost.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" to "bin\System.Web.Mvc.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.xml" to "bin\System.Web.Optimization.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" to "bin\System.Web.Razor.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" to "bin\System.Web.WebPages.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" to "bin\System.Web.WebPages.Deployment.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" to "bin\System.Web.WebPages.Razor.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.pdb" to "bin\Antlr3.Runtime.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.xml" to "bin\Microsoft.ApplicationInsights.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.xml" to "bin\Microsoft.AI.DependencyCollector.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.xml" to "bin\Microsoft.AI.ServerTelemetryChannel.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.xml" to "bin\Microsoft.AI.WindowsServer.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.xml" to "bin\Microsoft.AI.Web.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\DataAccessLayer.pdb" to "bin\DataAccessLayer.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\DataAccessLayer.dll.config" to "bin\DataAccessLayer.dll.config".
+_CopyOutOfDateSourceItemsToOutputDirectory:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ApplicationInsights.config" to "bin\ApplicationInsights.config".
+  Creating directory "bin\roslyn".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe" to "bin\roslyn\csc.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe.config" to "bin\roslyn\csc.exe.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.rsp" to "bin\roslyn\csc.rsp".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csi.exe" to "bin\roslyn\csi.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csi.rsp" to "bin\roslyn\csi.rsp".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" to "bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.dll" to "bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.Scripting.dll" to "bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.dll" to "bin\roslyn\Microsoft.CodeAnalysis.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.Scripting.dll" to "bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.VisualBasic.dll" to "bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CSharp.Core.targets" to "bin\roslyn\Microsoft.CSharp.Core.targets".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.amd64.dll" to "bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.x86.dll" to "bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.VisualBasic.Core.targets" to "bin\roslyn\Microsoft.VisualBasic.Core.targets".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.AppContext.dll" to "bin\roslyn\System.AppContext.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Collections.Immutable.dll" to "bin\roslyn\System.Collections.Immutable.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Diagnostics.StackTrace.dll" to "bin\roslyn\System.Diagnostics.StackTrace.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.dll" to "bin\roslyn\System.IO.FileSystem.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.Primitives.dll" to "bin\roslyn\System.IO.FileSystem.Primitives.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Reflection.Metadata.dll" to "bin\roslyn\System.Reflection.Metadata.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe" to "bin\roslyn\vbc.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe.config" to "bin\roslyn\vbc.exe.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.rsp" to "bin\roslyn\vbc.rsp".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe" to "bin\roslyn\VBCSCompiler.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe.config" to "bin\roslyn\VBCSCompiler.exe.config".
+_CopyAppConfigFile:
+  Copying file from "Web.config" to "bin\ProjectManagerApi.dll.config".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\ProjectManagerApi.dll" to "bin\ProjectManagerApi.dll".
+  ProjectManagerApi -> C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\ProjectManagerApi.dll
+  Copying file from "obj\Release\ProjectManagerApi.pdb" to "bin\ProjectManagerApi.pdb".
+ValidatePublishProfileSettings:
+  Validating PublishProfile(C:\Josy\CustomProfile.pubxml) settings.
+ValidateGlobalPackageSetting:
+  $(PackageAsSingleFile) is True
+  $(PackageFileName) is obj\Release\Package\ProjectManagerApi.zip. Validating...
+CollectFilesFromIntermediateAssembly:
+  Gather all files from Project items @(IntermediateAssembly). Adding:
+  bin\ProjectManagerApi.dll to bin\ProjectManagerApi.dll
+CollectFilesFromContent:
+  Gather all files from Project items @(Content). Adding:
+  favicon.ico;Global.asax;ApplicationInsights.config;Web.config;Web.Debug.config;Web.Release.config;packages.config
+CollectFilesFromIntermediateSatelliteAssembliesWithTargetPath:
+  Gather all files from Project output (IntermediateSatelliteAssembliesWithTargetPath). Adding:
+CollectFilesFromReference:
+  Gather all files from Project items @(ReferenceCopyLocalPaths,ReferenceComWrappersToCopyLocal,ResolvedIsolatedComModules,_DeploymentLooseManifestFile,NativeReferenceFile).
+CollectFilesFromAllExtraReferenceFiles:
+  Gather all files from Project items @(AllExtraReferenceFiles). Adding:
+CollectFilesFrom_SourceItemsToCopyToOutputDirectory:
+  Gather all files from Project items @(_SourceItemsToCopyToOutputDirectoryAlways,_SourceItemsToCopyToOutputDirectory). Adding:
+  bin\ApplicationInsights.config;bin\roslyn\csc.exe;bin\roslyn\csc.exe.config;bin\roslyn\csc.rsp;bin\roslyn\csi.exe;bin\roslyn\csi.rsp;bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll;bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll;bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll;bin\roslyn\Microsoft.CodeAnalysis.dll;bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll;bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll;bin\roslyn\Microsoft.CSharp.Core.targets;bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll;bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll;bin\roslyn\Microsoft.VisualBasic.Core.targets;bin\roslyn\System.AppContext.dll;bin\roslyn\System.Collections.Immutable.dll;bin\roslyn\System.Diagnostics.StackTrace.dll;bin\roslyn\System.IO.FileSystem.dll;bin\roslyn\System.IO.FileSystem.Primitives.dll;bin\roslyn\System.Reflection.Metadata.dll;bin\roslyn\vbc.exe;bin\roslyn\vbc.exe.config;bin\roslyn\vbc.rsp;bin\roslyn\VBCSCompiler.exe;bin\roslyn\VBCSCompiler.exe.config
+CollectFilesFrom_binDeployableAssemblies:
+  Gather all files from Project items @(_binDeployableAssemblies). Adding:
+PipelineCollectFilesPhase:
+  Publish Pipeline Collect Files Phase
+ExcludeGeneratedDebugSymbol:
+  Exclude All Debug Symbols
+PreTransformWebConfig:
+  Found The following for Config tranformation:
+  Web.config
+  Creating directory "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\obj\Release\TransformWebConfig\transformed\".
+  Copying Web.config to obj\Release\TransformWebConfig\original\Web.config.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\Web.Release.config to obj\Release\TransformWebConfig\assist\Web.config.
+TransformWebConfigCore:
+  Transforming Source File: C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\Web.config
+    Applying Transform File: C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\Web.Release.config
+    Output File: obj\Release\TransformWebConfig\transformed\Web.config
+  Transformation succeeded
+PostTransformWebConfig:
+  Transformed Web.config using C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\Web.Release.config into obj\Release\TransformWebConfig\transformed\Web.config.
+PreProfileTransformWebConfig:
+  Creating directory "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\obj\Release\ProfileTransformWebConfig\transformed\".
+PipelineTransformPhase:
+  Publish Pipeline Transform Phase
+CopyAllFilesToSingleFolderForPackage:
+  Creating directory "obj\Release\Package\PackageTmp".
+  Copying all files to temporary location below for package/publish:
+  obj\Release\Package\PackageTmp.
+  Copying bin\ProjectManagerApi.dll to obj\Release\Package\PackageTmp\bin\ProjectManagerApi.dll.
+  Copying favicon.ico to obj\Release\Package\PackageTmp\favicon.ico.
+  Copying Global.asax to obj\Release\Package\PackageTmp\Global.asax.
+  Copying ApplicationInsights.config to obj\Release\Package\PackageTmp\ApplicationInsights.config.
+  Copying packages.config to obj\Release\Package\PackageTmp\packages.config.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll to obj\Release\Package\PackageTmp\bin\Antlr3.Runtime.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll to obj\Release\Package\PackageTmp\bin\BusinessEntities.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\BusinessLayer.dll to obj\Release\Package\PackageTmp\bin\BusinessLayer.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll to obj\Release\Package\PackageTmp\bin\EntityFramework.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll to obj\Release\Package\PackageTmp\bin\EntityFramework.SqlServer.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AI.Agent.Intercept.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AI.DependencyCollector.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AI.PerfCounterCollector.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AI.ServerTelemetryChannel.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AI.Web.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll to obj\Release\Package\PackageTmp\bin\Microsoft.AI.WindowsServer.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll to obj\Release\Package\PackageTmp\bin\Microsoft.ApplicationInsights.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll to obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll to obj\Release\Package\PackageTmp\bin\Microsoft.Web.Infrastructure.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll to obj\Release\Package\PackageTmp\bin\Newtonsoft.Json.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll to obj\Release\Package\PackageTmp\bin\System.Net.Http.Formatting.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Cors.5.2.4\lib\net45\System.Web.Cors.dll to obj\Release\Package\PackageTmp\bin\System.Web.Cors.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll to obj\Release\Package\PackageTmp\bin\System.Web.Helpers.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Cors.5.2.4\lib\net45\System.Web.Http.Cors.dll to obj\Release\Package\PackageTmp\bin\System.Web.Http.Cors.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll to obj\Release\Package\PackageTmp\bin\System.Web.Http.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll to obj\Release\Package\PackageTmp\bin\System.Web.Http.WebHost.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll to obj\Release\Package\PackageTmp\bin\System.Web.Mvc.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll to obj\Release\Package\PackageTmp\bin\System.Web.Optimization.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll to obj\Release\Package\PackageTmp\bin\System.Web.Razor.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll to obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Deployment.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll to obj\Release\Package\PackageTmp\bin\System.Web.WebPages.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll to obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Razor.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\WebGrease.1.5.2\lib\WebGrease.dll to obj\Release\Package\PackageTmp\bin\WebGrease.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\DataAccessLayer.dll to obj\Release\Package\PackageTmp\bin\DataAccessLayer.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessLayer\bin\Release\DataAccessLayer.dll.config to obj\Release\Package\PackageTmp\bin\DataAccessLayer.dll.config.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ApplicationInsights.config to obj\Release\Package\PackageTmp\bin\ApplicationInsights.config.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe to obj\Release\Package\PackageTmp\bin\roslyn\csc.exe.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe.config to obj\Release\Package\PackageTmp\bin\roslyn\csc.exe.config.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.rsp to obj\Release\Package\PackageTmp\bin\roslyn\csc.rsp.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csi.exe to obj\Release\Package\PackageTmp\bin\roslyn\csi.exe.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csi.rsp to obj\Release\Package\PackageTmp\bin\roslyn\csi.rsp.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.Build.Tasks.CodeAnalysis.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.Scripting.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.Scripting.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.VisualBasic.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CSharp.Core.targets to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.amd64.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.x86.dll to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.VisualBasic.Core.targets to obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.AppContext.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.AppContext.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Collections.Immutable.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Diagnostics.StackTrace.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.Diagnostics.StackTrace.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.IO.FileSystem.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.Primitives.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.IO.FileSystem.Primitives.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Reflection.Metadata.dll to obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe to obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe.config to obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe.config.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.rsp to obj\Release\Package\PackageTmp\bin\roslyn\vbc.rsp.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe to obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.
+  Copying C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe.config to obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config.
+  Copying obj\Release\TransformWebConfig\transformed\Web.config to obj\Release\Package\PackageTmp\Web.config.
+PipelinePreDeployCopyAllFilesToOneFolder:
+  Publish Pipeline Deploy phase Stage PipelinePreDeployCopyAllFilesToOneFolder
+WebFileSystemPublish:
+  Copying obj\Release\Package\PackageTmp\ApplicationInsights.config to C:\Users\Admin\Desktop\FSD - API\ApplicationInsights.config.
+  Copying obj\Release\Package\PackageTmp\favicon.ico to C:\Users\Admin\Desktop\FSD - API\favicon.ico.
+  Copying obj\Release\Package\PackageTmp\Global.asax to C:\Users\Admin\Desktop\FSD - API\Global.asax.
+  Copying obj\Release\Package\PackageTmp\packages.config to C:\Users\Admin\Desktop\FSD - API\packages.config.
+  Copying obj\Release\Package\PackageTmp\Web.config to C:\Users\Admin\Desktop\FSD - API\Web.config.
+  Skip copying obj\Release\Package\PackageTmp\bin\Antlr3.Runtime.dll to C:\Users\Admin\Desktop\FSD - API\bin\Antlr3.Runtime.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Antlr3.Runtime.dll is up to date
+  Copying obj\Release\Package\PackageTmp\bin\ApplicationInsights.config to C:\Users\Admin\Desktop\FSD - API\bin\ApplicationInsights.config.
+  Copying obj\Release\Package\PackageTmp\bin\BusinessEntities.dll to C:\Users\Admin\Desktop\FSD - API\bin\BusinessEntities.dll.
+  Copying obj\Release\Package\PackageTmp\bin\BusinessLayer.dll to C:\Users\Admin\Desktop\FSD - API\bin\BusinessLayer.dll.
+  Copying obj\Release\Package\PackageTmp\bin\DataAccessLayer.dll to C:\Users\Admin\Desktop\FSD - API\bin\DataAccessLayer.dll.
+  Copying obj\Release\Package\PackageTmp\bin\DataAccessLayer.dll.config to C:\Users\Admin\Desktop\FSD - API\bin\DataAccessLayer.dll.config.
+  Skip copying obj\Release\Package\PackageTmp\bin\EntityFramework.dll to C:\Users\Admin\Desktop\FSD - API\bin\EntityFramework.dll, File C:\Users\Admin\Desktop\FSD - API\bin\EntityFramework.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\EntityFramework.SqlServer.dll to C:\Users\Admin\Desktop\FSD - API\bin\EntityFramework.SqlServer.dll, File C:\Users\Admin\Desktop\FSD - API\bin\EntityFramework.SqlServer.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.AI.Agent.Intercept.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.Agent.Intercept.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.Agent.Intercept.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.AI.DependencyCollector.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.DependencyCollector.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.DependencyCollector.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.AI.PerfCounterCollector.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.PerfCounterCollector.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.PerfCounterCollector.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.AI.ServerTelemetryChannel.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.ServerTelemetryChannel.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.ServerTelemetryChannel.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.AI.Web.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.Web.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.Web.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.AI.WindowsServer.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.WindowsServer.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.AI.WindowsServer.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.ApplicationInsights.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.ApplicationInsights.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.ApplicationInsights.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Microsoft.Web.Infrastructure.dll to C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.Web.Infrastructure.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Microsoft.Web.Infrastructure.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\Newtonsoft.Json.dll to C:\Users\Admin\Desktop\FSD - API\bin\Newtonsoft.Json.dll, File C:\Users\Admin\Desktop\FSD - API\bin\Newtonsoft.Json.dll is up to date
+  Copying obj\Release\Package\PackageTmp\bin\ProjectManagerApi.dll to C:\Users\Admin\Desktop\FSD - API\bin\ProjectManagerApi.dll.
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Net.Http.Formatting.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Net.Http.Formatting.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Net.Http.Formatting.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Cors.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Cors.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Cors.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Helpers.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Helpers.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Helpers.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Http.Cors.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Http.Cors.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Http.Cors.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Http.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Http.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Http.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Http.WebHost.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Http.WebHost.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Http.WebHost.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Mvc.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Mvc.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Mvc.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Optimization.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Optimization.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Optimization.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.Razor.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Razor.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.Razor.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Deployment.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.WebPages.Deployment.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.WebPages.Deployment.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.WebPages.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.WebPages.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.WebPages.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\System.Web.WebPages.Razor.dll to C:\Users\Admin\Desktop\FSD - API\bin\System.Web.WebPages.Razor.dll, File C:\Users\Admin\Desktop\FSD - API\bin\System.Web.WebPages.Razor.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\WebGrease.dll to C:\Users\Admin\Desktop\FSD - API\bin\WebGrease.dll, File C:\Users\Admin\Desktop\FSD - API\bin\WebGrease.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\csc.exe to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csc.exe, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csc.exe is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\csc.exe.config to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csc.exe.config, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csc.exe.config is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\csc.rsp to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csc.rsp, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csc.rsp is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\csi.exe to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csi.exe, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csi.exe is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\csi.rsp to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csi.rsp, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\csi.rsp is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CSharp.Core.targets, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.CSharp.Core.targets is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.VisualBasic.Core.targets, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\Microsoft.VisualBasic.Core.targets is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\System.AppContext.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.AppContext.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.AppContext.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.Collections.Immutable.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.Collections.Immutable.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\System.Diagnostics.StackTrace.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.Diagnostics.StackTrace.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.Diagnostics.StackTrace.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\System.IO.FileSystem.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.IO.FileSystem.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.IO.FileSystem.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\System.IO.FileSystem.Primitives.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.IO.FileSystem.Primitives.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.IO.FileSystem.Primitives.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.Reflection.Metadata.dll, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\System.Reflection.Metadata.dll is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\vbc.exe, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\vbc.exe is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe.config to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\vbc.exe.config, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\vbc.exe.config is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\vbc.rsp to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\vbc.rsp, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\vbc.rsp is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\VBCSCompiler.exe, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\VBCSCompiler.exe is up to date
+  Skip copying obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config to C:\Users\Admin\Desktop\FSD - API\bin\roslyn\VBCSCompiler.exe.config, File C:\Users\Admin\Desktop\FSD - API\bin\roslyn\VBCSCompiler.exe.config is up to date
+PreAutoParameterizationWebConfigConnectionStrings:
+  Creating directory "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\obj\Release\CSAutoParameterize\transformed\".
+  Copying obj\Release\Package\PackageTmp\Web.config to obj\Release\CSAutoParameterize\original\Web.config.
+AutoParameterizationWebConfigConnectionStringsCore:
+  Transforming Source File: C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\obj\Release\Package\PackageTmp\Web.config
+    Applying Transform File: <?xml version="1.0"?>
+          <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+            <connectionStrings>
+              <add
+                connectionString="{% token='$(ReplacableToken_#(parameter)_#(tokennumber))' xpathlocator='name' parameter='$(name)-Web.config Connection String' description='$(name) Connection String used in web.config by the application to access the database.' defaultValue='$(connectionString)' tags='SqlConnectionString' %}"
+                xdt:Transform="SetTokenizedAttributes(connectionString)" xdt:SupressWarnings="True" />
+            </connectionStrings>
+          </configuration>
+    Output File: obj\Release\CSAutoParameterize\transformed\Web.config
+  Transformation succeeded
+PostAutoParameterizationWebConfigConnectionStrings:
+  Auto ConnectionString Transformed obj\Release\Package\PackageTmp\Web.config into obj\Release\CSAutoParameterize\transformed\Web.config.
+PipelineMsdeploySpecificTransformPhase:
+  Publish Pipeline Deploy phase Stage PipelineMsdeploySpecificTransformPhase
+PipelineDeployPhase:
+  Publish Pipeline Deploy Phase
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ProjectManagerApi.csproj" (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj" (6) on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "bin\Release\".
+  Creating directory "obj\Release\".
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\amd64\Microsoft.Common.CurrentVersion.targets(1964,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "NBench.Runner, Version=1.0.4.0, Culture=neutral, processorArchitecture=AMD64", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project. [C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj]
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn\csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NBench.Runner.1.0.4\lib\net452\NBench.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NBench.Runner.1.0.4\lib\net452\NBench.Runner.exe" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\ProjectManagerApi.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.ComponentModel.DataAnnotations.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Net.Http.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.Extensions.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll" /reference:"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\ProjectManagerApi.Test.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output ProjectControllerTest.cs ProjectManagerNBench.cs Properties\AssemblyInfo.cs TaskControllerTest.cs UserControllerTest.cs "C:\WINDOWS\TEMP\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+  Using shared compilation with compiler from directory: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Roslyn
+ProjectManagerNBench.cs(10,21): warning CS0414: The field 'ProjectManagerNBench.key' is assigned but its value is never used [C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj]
+_CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.dll" to "bin\Release\BusinessEntities.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll" to "bin\Release\EntityFramework.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll" to "bin\Release\EntityFramework.SqlServer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NBench.Runner.1.0.4\lib\net452\NBench.dll" to "bin\Release\NBench.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NBench.Runner.1.0.4\lib\net452\NBench.Runner.exe" to "bin\Release\NBench.Runner.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll" to "bin\Release\Newtonsoft.Json.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll" to "bin\Release\nunit.framework.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\ProjectManagerApi.dll" to "bin\Release\ProjectManagerApi.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll" to "bin\Release\System.Net.Http.Formatting.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll" to "bin\Release\System.Web.Http.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll" to "bin\Release\System.Web.Http.WebHost.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\System.Web.Http.Cors.dll" to "bin\Release\System.Web.Http.Cors.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\BusinessLayer.dll" to "bin\Release\BusinessLayer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\System.Web.Cors.dll" to "bin\Release\System.Web.Cors.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\DataAccessLayer.dll" to "bin\Release\DataAccessLayer.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\BusinessEntities\bin\Release\BusinessEntities.pdb" to "bin\Release\BusinessEntities.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\ProjectManagerApi.pdb" to "bin\Release\ProjectManagerApi.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\ProjectManagerApi.dll.config" to "bin\Release\ProjectManagerApi.dll.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.xml" to "bin\Release\EntityFramework.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.xml" to "bin\Release\EntityFramework.SqlServer.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.xml" to "bin\Release\Newtonsoft.Json.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit.3.10.1\lib\net45\nunit.framework.pdb" to "bin\Release\nunit.framework.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit.3.10.1\lib\net45\nunit.framework.xml" to "bin\Release\nunit.framework.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.xml" to "bin\Release\System.Net.Http.Formatting.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.xml" to "bin\Release\System.Web.Http.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.xml" to "bin\Release\System.Web.Http.WebHost.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\System.Web.Http.Cors.xml" to "bin\Release\System.Web.Http.Cors.xml".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\BusinessLayer.pdb" to "bin\Release\BusinessLayer.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\DataAccessLayer.pdb" to "bin\Release\DataAccessLayer.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\bin\DataAccessLayer.dll.config" to "bin\Release\DataAccessLayer.dll.config".
+_CopyOutOfDateSourceItemsToOutputDirectory:
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi\ApplicationInsights.config" to "bin\Release\ApplicationInsights.config".
+  Creating directory "bin\Release\roslyn".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe" to "bin\Release\roslyn\csc.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe.config" to "bin\Release\roslyn\csc.exe.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csc.rsp" to "bin\Release\roslyn\csc.rsp".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csi.exe" to "bin\Release\roslyn\csi.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\csi.rsp" to "bin\Release\roslyn\csi.rsp".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" to "bin\Release\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.CSharp.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.Scripting.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.Scripting.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.Scripting.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.VisualBasic.dll" to "bin\Release\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CSharp.Core.targets" to "bin\Release\roslyn\Microsoft.CSharp.Core.targets".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.amd64.dll" to "bin\Release\roslyn\Microsoft.DiaSymReader.Native.amd64.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.x86.dll" to "bin\Release\roslyn\Microsoft.DiaSymReader.Native.x86.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.VisualBasic.Core.targets" to "bin\Release\roslyn\Microsoft.VisualBasic.Core.targets".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.AppContext.dll" to "bin\Release\roslyn\System.AppContext.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Collections.Immutable.dll" to "bin\Release\roslyn\System.Collections.Immutable.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Diagnostics.StackTrace.dll" to "bin\Release\roslyn\System.Diagnostics.StackTrace.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.dll" to "bin\Release\roslyn\System.IO.FileSystem.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.Primitives.dll" to "bin\Release\roslyn\System.IO.FileSystem.Primitives.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\System.Reflection.Metadata.dll" to "bin\Release\roslyn\System.Reflection.Metadata.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe" to "bin\Release\roslyn\vbc.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe.config" to "bin\Release\roslyn\vbc.exe.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.rsp" to "bin\Release\roslyn\vbc.rsp".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe" to "bin\Release\roslyn\VBCSCompiler.exe".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe.config" to "bin\Release\roslyn\VBCSCompiler.exe.config".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3.TestAdapter.dll" to "bin\Release\NUnit3.TestAdapter.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3.TestAdapter.pdb" to "bin\Release\NUnit3.TestAdapter.pdb".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit3TestAdapter.3.10.0\build\net35\nunit.engine.dll" to "bin\Release\nunit.engine.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit3TestAdapter.3.10.0\build\net35\nunit.engine.api.dll" to "bin\Release\nunit.engine.api.dll".
+  Copying file from "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\packages\NUnit3TestAdapter.3.10.0\build\net35\Mono.Cecil.dll" to "bin\Release\Mono.Cecil.dll".
+_CopyAppConfigFile:
+  Copying file from "app.config" to "bin\Release\ProjectManagerApi.Test.dll.config".
+CopyFilesToOutputDirectory:
+  Copying file from "obj\Release\ProjectManagerApi.Test.dll" to "bin\Release\ProjectManagerApi.Test.dll".
+  ProjectManagerApi.Test -> C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\bin\Release\ProjectManagerApi.Test.dll
+  Copying file from "obj\Release\ProjectManagerApi.Test.pdb" to "bin\Release\ProjectManagerApi.Test.pdb".
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj" (default targets).
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.sln" (default targets).
+
+Build succeeded.
+
+"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.sln" (default target) (1) ->
+"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj" (default target) (6) ->
+(ResolveAssemblyReferences target) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\amd64\Microsoft.Common.CurrentVersion.targets(1964,5): warning MSB3270: There was a mismatch between the processor architecture of the project being built "MSIL" and the processor architecture of the reference "NBench.Runner, Version=1.0.4.0, Culture=neutral, processorArchitecture=AMD64", "AMD64". This mismatch may cause runtime failures. Please consider changing the targeted processor architecture of your project through the Configuration Manager so as to align the processor architectures between your project and references, or take a dependency on references with a processor architecture that matches the targeted processor architecture of your project. [C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj]
+
+
+"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.sln" (default target) (1) ->
+"C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj" (default target) (6) ->
+(CoreCompile target) -> 
+  ProjectManagerNBench.cs(10,21): warning CS0414: The field 'ProjectManagerNBench.key' is assigned but its value is never used [C:\Program Files (x86)\Jenkins\workspace\Project Management - WebAPI\ProjectManagerApi.Test\ProjectManagerApi.Test.csproj]
+
+    2 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:30.09
+Finished: SUCCESS
