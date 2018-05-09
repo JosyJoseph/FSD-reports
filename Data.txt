@@ -1,0 +1,59 @@
+Origin http://localhost not found in Access-Control-Allow-Origin header.
+
+https://captivateprime.adobe.com/cognizantiiht
+
+Global tool -Msbuild path
+
+nuget.exe
+
+http://172.18.2.18/JosyJoseph/FSD-Reports.git
+
+C:\Josy\nuget.exe restore ProjectManagerApi.sln
+
+/P:VisualStudioVersion=15.0
+/P:AllowUntrustedCertificate=true
+/P:DeployOnBuild=True
+/P:PublishProfile="C:\Josy\CustomProfile.pubxml"
+/P:DeployIISAppPath="ProjectManagerApi"
+/P:Configuration=Release
+
+Jenkins 
+admin
+ebc5389aa2c04c7aa6eb5399621719ca
+
+GitLab API token - Pz9YFkVN36mCBXDyHJsd
+
+https://codeforgeek.com/2016/04/continuous-integration-deployment-jenkins-node-js/
+
+http://172.18.2.18/JosyJoseph/ProjectManagement-API.git
+git remote add origin http://172.18.2.18/JosyJoseph/ProjectManagement.git
+
+file copy plugin****
+
+
+Git global setup
+git config --global user.name "Josy"
+git config --global user.email "josy4joseph@gmail.com"
+
+Create a new repository
+git clone http://localhost/JosyJoseph/test1.git
+cd test1
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder
+cd existing_folder
+git init
+git remote add origin http://172.18.2.18/JosyJoseph/ProjectManagement.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin http://172.18.2.18/JosyJoseph/ProjectManagement.git
+git push -u origin --all
+git push -u origin --tags
